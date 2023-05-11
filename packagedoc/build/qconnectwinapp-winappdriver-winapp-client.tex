@@ -1,0 +1,257 @@
+%
+% Generated at 10.05.2023 - 14:41:24 by QConnectWinapp
+%
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-customwebdriver}{%
+\section{Class: CustomWebDriver}\label{qconnectwinapp-winappdriver-winapp-client-customwebdriver}}
+
+\emph{Imported by}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ QConnectWinapp.WinappDriver.winapp\_client }\ImportTok{import}\NormalTok{ CustomWebDriver}
+\end{Highlighting}
+\end{Shaded}
+
+Customer WebDriver class for Winapp.
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-customwebdriver-start-session}{%
+\subsection{Method: start\_session}\label{qconnectwinapp-winappdriver-winapp-client-customwebdriver-start-session}}
+
+Creates a new session with the desired capabilities.
+
+Override for Winapp
+
+\textbf{Arguments:}
+
+\begin{itemize}
+\item
+  \texttt{capabilities}
+
+  / \emph{Condition}: required / \emph{Type}: Union /
+
+  Read
+  \url{https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md}
+  for more details.
+\item
+  \texttt{browser\_profile}
+
+  / \emph{Condition}: optional / \emph{Type}: str / \emph{Default}: None
+  /
+
+  Browser profile
+\end{itemize}
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-winappconfig}{%
+\section{Class: WinappConfig}\label{qconnectwinapp-winappdriver-winapp-client-winappconfig}}
+
+\emph{Imported by}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ QConnectWinapp.WinappDriver.winapp\_client }\ImportTok{import}\NormalTok{ WinappConfig}
+\end{Highlighting}
+\end{Shaded}
+
+Class to store the configuration for SSH connection.
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-winappclient}{%
+\section{Class: WinAppClient}\label{qconnectwinapp-winappdriver-winapp-client-winappclient}}
+
+\emph{Imported by}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ QConnectWinapp.WinappDriver.winapp\_client }\ImportTok{import}\NormalTok{ WinAppClient}
+\end{Highlighting}
+\end{Shaded}
+
+Winapp client connection class.
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-winappclient-connect}{%
+\subsection{Method: connect}\label{qconnectwinapp-winappdriver-winapp-client-winappclient-connect}}
+
+Connect to WinappDriver which is listening on configured port.
+
+\textbf{Returns:}
+
+(\emph{no returns})
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-winappclient-perform-action}{%
+\subsection{Method: perform\_action}\label{qconnectwinapp-winappdriver-winapp-client-winappclient-perform-action}}
+
+Perform an action on user defined element.
+
+\textbf{Arguments:}
+
+\begin{itemize}
+\item
+  \texttt{obj\_defined\_dict}
+
+  / \emph{Condition}: required / \emph{Type}: dict /
+
+  User\textquotesingle s definition for a GUI element.
+\item
+  \texttt{cmd}
+
+  / \emph{Condition}: required / \emph{Type}: str /
+
+  Action to be perform on GUI element.
+\item
+  \texttt{time\_wait}
+
+  / \emph{Condition}: optional / \emph{Type}: int / \emph{Default}: 0 /
+
+  Timeout to find a GUI element based on user\textquotesingle s
+  definitions.
+\end{itemize}
+
+\textbf{Returns:}
+
+\begin{quote}
+/ \emph{Type}: WebElement /
+
+GUI element.
+\end{quote}
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-winappclient-send-obj}{%
+\subsection{Method: send\_obj}\label{qconnectwinapp-winappdriver-winapp-client-winappclient-send-obj}}
+
+Action to be send to a GUI element.
+
+\textbf{Arguments:}
+
+\begin{itemize}
+\item
+  \texttt{obj}
+
+  / \emph{Condition}: required / \emph{Type}: str /
+
+  Data to be sent.
+\item
+  \texttt{element\_def}
+
+  / \emph{Condition}: required / \emph{Type}: dict /
+
+  User\textquotesingle s definition for a GUI element.
+\item
+  \texttt{args}
+
+  / \emph{Condition}: optional / \emph{Type}: tuple /
+
+  Optional arguments.
+\end{itemize}
+
+\textbf{Returns:}
+
+(\emph{no returns})
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-winappclient-wait-4-trace}{%
+\subsection{Method: wait\_4\_trace}\label{qconnectwinapp-winappdriver-winapp-client-winappclient-wait-4-trace}}
+
+Perform an action on GUI element and wait to receive a return which
+matches to a specified regular expression.
+
+\textbf{Arguments:}
+
+\begin{itemize}
+\item
+  \texttt{search\_obj}
+
+  / \emph{Condition}: required / \emph{Type}: str /
+
+  Regular expression all received trace messages are compare to. Can be
+  passed either as a string or a regular expression object. Refer to
+  Python documentation for module \textquotesingle re\textquotesingle.
+\item
+  \texttt{use\_fetch\_block}
+
+  / \emph{Condition}: optional / \emph{Type}: bool / \emph{Default}:
+  False /
+
+  Determine if \textquotesingle fetch block\textquotesingle{} feature is
+  used.
+\item
+  \texttt{end\_of\_block\_pattern}
+
+  / \emph{Condition}: optional / \emph{Type}: str / \emph{Default}:
+  \textquotesingle.*\textquotesingle{} /
+
+  The end of block pattern.
+\item
+  \texttt{filter\_pattern}
+
+  / \emph{Condition}: optional / \emph{Type}: str / \emph{Default}:
+  \textquotesingle.*\textquotesingle{} /
+
+  Pattern to filter message line by line.
+\item
+  \texttt{timeout}
+
+  / \emph{Condition}: optional / \emph{Type}: int / \emph{Default}: 0 /
+
+  Timeout parameter specified as a floating point number in the unit
+  \textquotesingle seconds\textquotesingle.
+\item
+  \texttt{element\_def}
+
+  / \emph{Condition}: required / \emph{Type}: dict /
+
+  User\textquotesingle s definition for a GUI element.
+\item
+  \texttt{args}
+
+  / \emph{Condition}: optional / \emph{Type}: tuple /
+
+  Optional arguments.
+\end{itemize}
+
+\textbf{Returns:}
+
+\begin{itemize}
+\item
+  \texttt{match}
+
+  / \emph{Type}: re.Match /
+
+  If no return value matched to the specified regular expression and a
+  timeout occurred, return None.
+
+  If a return value has matched to the specified regular expression, a
+  match object is returned as the result.The complete trace message can
+  be accessed by the \textquotesingle string\textquotesingle{} attribute
+  of the match object. For access to groups within the regular
+  expression, use the group() method. For more information, refer to
+  Python documentation for module \textquotesingle re\textquotesingle.
+\end{itemize}
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-winappclient-disconnect}{%
+\subsection{Method: disconnect}\label{qconnectwinapp-winappdriver-winapp-client-winappclient-disconnect}}
+
+Abstract method for disconnecting connection.
+
+\textbf{Arguments:}
+
+\begin{itemize}
+\item
+  \texttt{\_device}
+
+  \begin{quote}
+  / \emph{Condition}: required / \emph{Type}: str /
+
+  Unused.
+  \end{quote}
+\end{itemize}
+
+\textbf{Returns:}
+
+(\emph{no returns})
+
+\hypertarget{qconnectwinapp-winappdriver-winapp-client-winappclient-quit}{%
+\subsection{Method: quit}\label{qconnectwinapp-winappdriver-winapp-client-winappclient-quit}}
+
+Quiting the connection.
+
+\textbf{Returns:}
+
+(\emph{no returns})

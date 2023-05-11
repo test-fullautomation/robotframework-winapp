@@ -1,0 +1,74 @@
+
+\documentclass[a4paper,10pt]{report}
+
+% --------------------------------------------------------------------------------------------------------------
+% preamble
+% --------------------------------------------------------------------------------------------------------------
+
+\input{./styles/preamble}
+
+% --------------------------------------------------------------------------------------------------------------
+% title
+% --------------------------------------------------------------------------------------------------------------
+
+\title{\textbf{QConnectWinapp}\\
+\vspace{2ex}
+\textbf{v. 1.0.0}}
+
+\author{Nguyen Huynh Tri Cuong}
+
+\date{25.04.2023}
+
+% --------------------------------------------------------------------------------------------------------------
+% document
+% --------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+
+\hypersetup{pageanchor=false}
+
+\maketitle
+
+\clearpage
+\pagenumbering{Alph}
+\tableofcontents
+
+\clearpage
+\pagenumbering{arabic}
+
+\hypersetup{pageanchor=true}
+
+      
+
+\chapter{Introduction}\label{introduction}
+\input{./Introduction.tex}
+      
+
+\chapter{Description}\label{description}
+\input{./Description.tex}
+      
+
+\chapter{element\_handler.py}\label{qconnectwinapp-actionhandlers-element-handler}
+\input{./qconnectwinapp-actionhandlers-element-handler.tex}
+      
+
+\chapter{winapp\_client.py}\label{qconnectwinapp-winappdriver-winapp-client}
+\input{./qconnectwinapp-winappdriver-winapp-client.tex}
+      
+
+\chapter{Appendix}\label{appendix}
+\input{./Appendix.tex}
+      
+
+\chapter{History}\label{history}
+\input{./History.tex}
+      
+\vfill
+\begin{center}
+\begin{tabular}{m{16em}}\hline
+   \multicolumn{1}{c}{\textbf{QConnectWinapp.pdf}}\\
+   \multicolumn{1}{c}{\textit{Created at 10.05.2023 - 14:41:19}}\\
+   \multicolumn{1}{c}{\textit{by GenPackageDoc v. 0.39.0}}\\ \hline
+\end{tabular}
+\end{center}
+\end{document}
