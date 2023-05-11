@@ -6,7 +6,7 @@
 
 A detailed documentation of the QConnectionWinapp package can be found
 here:
-[QConnectionWinapp.pdf](https://sourcecode.socialcoding.bosch.com/projects/ROBFW/repos/robotframework-qconnect-dlt/browse/QConnectionDLTLibrary/QConnectionDLTLibrary.pdf)
+[QConnectionWinapp.pdf](https://github.com/test-fullautomation/robotframework-winapp/blob/develop/QConnectWinapp/QConnectWinapp.pdf)
 
 ## Feedback
 
