@@ -89,7 +89,7 @@ automationName & The name of the automation engine to use (e.g. windows). \\
 
 \hypertarget{definition}{%
 \subsection{\texorpdfstring{\textbf{How to define a GUI control}}{definition}}\label{definition}}
-Currently, the ABC library supports identifying a GUI control on a test application through its Accessible Name. There are various ways to determine the accessible name of a control, one of which is by using the Inspect.exe tool. To use it, follow these steps:
+Currently, the QConnectWinapp library supports identifying a GUI control on a test application through its Accessible Name. There are various ways to determine the accessible name of a control, one of which is by using the Inspect.exe tool. To use it, follow these steps:
 \begin{itemize}
 \item Navigate to the Windows SDK folder located under C:\textbackslash Program Files (x86)\textbackslash Windows Kits\textbackslash 10\textbackslash bin\textbackslash 10.0.17134.0\textbackslash x64
 \item Open Inspect.exe
@@ -180,6 +180,7 @@ Close Connection
     disconnect  ${CONNECTION_NAME}
 \end{robotcode}
 
+\textbf{Explanation:}
 \begin{itemize}
 \item \colorbox{gray!16}{\textbf{\&\{Number 8\} acc\_id=num8Button}}: This line is used to identify the 'Number 8' button as the control on the application with an Accessible Name (acc\_id) of 'num8Button'.
 \item \colorbox{gray!16}{\textbf{"app": "Microsoft.WindowsCalculator\_8wekyb3d8bbwe!App"}}: This line specifies that the AUT is the application with the package name 'Microsoft.WindowsCalculator\_8wekyb3d8bbwe!App'. You can also use the full path to the exe file of the AUT.
