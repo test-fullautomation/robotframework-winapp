@@ -1,12 +1,56 @@
-# QConnectionWinapp Package Description
+# Package Description
 
-!!! TODO: Place required content of README_orig.rst here !!!
+The **QConnectWinapp** description will be available soon.
+
+## How to install
+
+Installer will be available soon.
+
+The **QConnectWinapp** can be installed in two different ways.
+
+1.  Installation via PyPi (recommended for users)
+
+    ``` 
+    pip install QConnectWinapp
+    ```
+
+    [QConnectWinapp in PyPi](https://pypi.org/project/QConnectWinapp/)
+
+2.  Installation via GitHub (recommended for developers)
+
+    a.  Clone the **robotframework-qconnect-winapp** repository to your
+        machine.
+
+        ``` 
+        git clone https://github.com/test-fullautomation/robotframework-qconnect-winapp.git
+        ```
+
+        [QConnectWinapp in
+        GitHub](https://github.com/test-fullautomation/robotframework-qconnect-winapp)
+
+    b.  Install dependencies
+
+        **QConnectWinapp** requires some additional Python libraries.
+        Before you install the cloned repository sources you have to
+        install the dependencies manually. The names of all related
+        packages you can find in the file `requirements.txt` in the
+        repository root folder. Use pip to install them:
+
+        ``` 
+        pip install -r requirements.txt
+        ```
+
+    c.  Use the following command to install the **QConnectWinapp**:
+
+        ``` 
+        setup.py install
+        ```
 
 ## Package Documentation
 
-A detailed documentation of the QConnectionWinapp package can be found
-here:
-[QConnectionWinapp.pdf](https://github.com/test-fullautomation/robotframework-winapp/blob/develop/QConnectWinapp/QConnectWinapp.pdf)
+A detailed documentation of the **QConnectWinapp** can be found here:
+
+[QConnectWinapp.pdf](https://github.com/test-fullautomation/robotframework-qconnect-winapp/blob/develop/QConnectWinapp/QConnectWinapp.pdf)
 
 ## Feedback
 
@@ -20,11 +64,13 @@ please don\'t hesitate to raise a ticket.
 
 [Thomas Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
 
-## Contributors
-
 [Nguyen Huynh Tri Cuong](mailto:cuong.nguyenhuynhtri@vn.bosch.com)
 
+## Contributors
+
 [Thomas Pollerspöck](mailto:Thomas.Pollerspoeck@de.bosch.com)
+
+[Nguyen Huynh Tri Cuong](mailto:cuong.nguyenhuynhtri@vn.bosch.com)
 
 ## License
 
