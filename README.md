@@ -1,3 +1,12 @@
+> All rights reserved, also regarding any disposal, exploitation,
+> reproduction, editing, distribution, as well as in the event of
+> applications for industrial property rights.
+>
+> This program and the accompanying materials are made available under
+> the terms of the Bosch Internal Open Source License v4 which
+> accompanies this distribution, and is available at
+> <http://bios.intranet.bosch.com/bioslv4.txt>
+
 # QConnectionWinapp Package Description
 
 !!! TODO: Place required content of README_orig.rst here !!!
@@ -6,7 +15,7 @@
 
 A detailed documentation of the QConnectionWinapp package can be found
 here:
-[QConnectionWinapp.pdf](https://github.com/test-fullautomation/robotframework-winapp/blob/develop/QConnectWinapp/QConnectWinapp.pdf)
+[QConnectionWinapp.pdf](https://sourcecode.socialcoding.bosch.com/projects/ROBFW/repos/robotframework-qconnect-dlt/browse/QConnectionDLTLibrary/QConnectionDLTLibrary.pdf)
 
 ## Feedback
 
@@ -28,17 +37,13 @@ please don\'t hesitate to raise a ticket.
 
 ## License
 
-Copyright 2020-2022 Robert Bosch GmbH
+Copyright (C) Robert Bosch GmbH 2022.
 
-Licensed under the Apache License, Version 2.0 (the \"License\"); you
-may not use this file except in compliance with the License. You may
-obtain a copy of the License at
+All rights reserved, also regarding any disposal, exploitation,
+reproduction, editing, distribution, as well as in the event of
+applications for industrial property rights.
 
-> [![License: Apache
-> v2](https://img.shields.io/pypi/l/robotframework.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an \"AS IS\" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+This program and the accompanying materials are made available under the
+terms of the Bosch Internal Open Source License v4 which accompanies
+this distribution, and is available at
+<http://bios.intranet.bosch.com/bioslv4.txt>
