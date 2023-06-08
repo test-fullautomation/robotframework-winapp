@@ -5,15 +5,15 @@
    "AUTHOREMAIL" : "cuong.nguyenhuynhtri@vn.bosch.com",
    "DESCRIPTION" : "Robot Framework QConnect library extension for Winapp GUI testing",
    "LONGDESCRIPTIONCONTENTTYPE" : "text/markdown",
-   "URL" : "https://sourcecode.socialcoding.bosch.com/projects/ROBFW/repos/robotframework-qconnect-dlt/browse",
+   "URL" : "https://github.com/test-fullautomation/robotframework-qconnect-winapp",
    "PROGRAMMINGLANGUAGE" : "Programming Language :: Python :: 3",
    "LICENCE" : "License :: OSI Approved :: Apache Software License",
-   "OPERATINGSYSTEM" : "Operating System :: OS Independent",
+   "OPERATINGSYSTEM" : "Operating System :: Microsoft :: Windows",
    "PYTHONREQUIRES" : ">=3.0",
    "DEVELOPMENTSTATUS" : "Development Status :: 4 - Beta",
    "INTENDEDAUDIENCE" : "Intended Audience :: Developers",
    "TOPIC" : "Topic :: Software Development",
-   "INSTALLREQUIRES" : ["pypandoc","colorama","GenPackageDoc","PythonExtensionsCollection"],
+   "INSTALLREQUIRES" : ["pypandoc","colorama","GenPackageDoc","PythonExtensionsCollection","Appium-Python-Client","selenium"],
    "PACKAGEDATA" : ["*.resource","*.pdf"],
    "PACKAGEDOC" : "./packagedoc"
 }
