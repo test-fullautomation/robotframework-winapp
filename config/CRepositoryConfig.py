@@ -39,8 +39,9 @@ import pypandoc
 
 from PythonExtensionsCollection.String.CString import CString
 
-from QConnectWinapp.version import VERSION
-from QConnectWinapp.version import VERSION_DATE
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), "QConnectWinapp"))
+from version import VERSION
+from version import VERSION_DATE
 
 col.init(autoreset=True)
 COLBR = col.Style.BRIGHT + col.Fore.RED
