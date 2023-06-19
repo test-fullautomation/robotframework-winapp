@@ -29,11 +29,11 @@ python setup.py install
 \hypertarget{usage}{%
 \section{Usage}\label{usage}}
 
-QConnectWinapp is a backend extension for the QConnectBase library that adds support for testing WinApp UI. 
-From the user's perspective, this means they now have an additional connection type for WinApp testing when using the \textbf{connect} keyword in the QConnectBase library. 
+QConnectWinapp is a backend extension for the QConnectBase library that adds support for testing WinApp UI.
+From the user's perspective, this means they now have an additional connection type for WinApp testing when using the \textbf{connect} keyword in the QConnectBase library.
 With QConnectWinapp, users can now easily automate tests for Windows desktop applications, and take advantage of its integration with WinAppDriver to interact with UI elements and validate their behavior.
 
-Please refer to \href{https://github.com/test-fullautomation/robotframework-qconnect-base/blob/develop/QConnectBase/QConnectBase.pdf}{QConnectBase} for more information on how to use the \textbf{connect} keyword. 
+Please refer to \href{https://github.com/test-fullautomation/robotframework-qconnect-base/blob/develop/QConnectBase/QConnectBase.pdf}{QConnectBase} for more information on how to use the \textbf{connect} keyword.
 In this section, we will focus on the \textbf{Winapp} connection type and how to configure it.
 
 \hypertarget{connect}{%
@@ -105,7 +105,7 @@ Currently, the QConnectWinapp library supports identifying a GUI control on a te
 
 \hypertarget{example}{%
 \section{Example}\label{example}}
-In this example, I provide a test scenario that allows adding on the Calculator app as follows: the script will open the Calculator application on Windows, then press the '8' button, press the '+' button, press the '9' button, and then press the '=' button. 
+In this example, I provide a test scenario that allows adding on the Calculator app as follows: the script will open the Calculator application on Windows, then press the '8' button, press the '+' button, press the '9' button, and then press the '=' button.
 Then, verify if the result textbox displays the result '17'.
 
 
@@ -173,7 +173,7 @@ Test Adding
     ...                    timeout=20
 
     log to console  \nCalculation result: ${res}[0]
-    
+
 
 *** Keyword ***
 Close Connection
