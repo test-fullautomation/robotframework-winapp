@@ -1,2 +1,2 @@
-recursive-include QConnectWinapp/GUIAction.resource
+recursive-include tools/bin *
 global-exclude *.pyc

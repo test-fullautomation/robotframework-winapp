@@ -179,7 +179,7 @@ Connect to WinappDriver which is listening on configured port.
             desired_capabilities=self.caps)
 
       self._find_element_method_dict = {
-         "acc_id": lambda value: self.winapp_driver.find_element(AppiumBy.ACCESSIBILITY_ID, value)
+         "AutomationId": lambda value: self.winapp_driver.find_element(AppiumBy.ACCESSIBILITY_ID, value)
       }
 
       self.__support_id_list = list(self._find_element_method_dict.keys())
