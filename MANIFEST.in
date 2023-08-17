@@ -1,2 +1,2 @@
-recursive-include tools/bin *
+recursive-include QConnectWinapp/tools/bin *
 global-exclude *.pyc
