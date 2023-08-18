@@ -87,21 +87,107 @@ automationName & The name of the automation engine to use (e.g. windows). \\
 \end{tabular}
 \end{table}
 
-\hypertarget{definition}{%
-\subsection{\texorpdfstring{\textbf{How to define a GUI control}}{definition}}\label{definition}}
-Currently, the QConnectWinapp library supports identifying a GUI control on a test application through its Accessible Name. There are various ways to determine the accessible name of a control, one of which is by using the Inspect.exe tool. To use it, follow these steps:
-\begin{itemize}
-\item Navigate to the Windows SDK folder located under C:\textbackslash Program Files (x86)\textbackslash Windows Kits\textbackslash 10\textbackslash bin\textbackslash 10.0.17134.0\textbackslash x64
-\item Open Inspect.exe
-\item Hover over the control you want to identify on the test application
-\item In the right-hand pane of Inspect.exe, you will be able to determine the Accessible Name of the control by its AutomationId property.
-\end{itemize}
 
+\hypertarget{definition}{%
+\subsection{\texorpdfstring{\textbf{Using the Automation Inspector Tool to define a GUI control}}{definition}}\label{definition}}
+The Automation Inspector tool provides a convenient way to interact with controls of an Application Under Test (AUT) and create resource files for testing. Follow the steps below to effectively utilize the tool:
+
+\subsubsection{Accessing the Tool}
+The Automation Inspector tool can be found at the following location: C:/Program Files/RobotFramework/python39/Lib/site-packages/QConnectWinapp/tools/bin/release.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=\linewidth]{pictures/capture_control.png}
-  \caption{Using Inspect.exe to identify the Accessible Name of Number 8 button.}
+  \includegraphics[width=\linewidth]{pictures/inspector_overview.png}
+  \caption{Automation Inspector tool.}
 \end{figure}
+\subsubsection{Tool Overview}
+Upon launching the Automation Inspector tool, you will be presented with a graphical user interface that offers a range of functionalities. The main features (please refer to the Figure 2.1) of the tool are described below:
+
+\begin{enumerate}
+    \item \textbf{Exec AUT button:} Press this button to start an Application Under Test (AUT).
+    
+    \item \textbf{Refresh button:} Press this button to refresh the information of the AUT.
+    
+    \item \textbf{Inspect controls button:} After pressing this button, users can hover their mouse over controls on the AUT. The tool will automatically highlight and display the attributes of the currently highlighted control.
+    
+    \item \textbf{Elements treeview area:} This area displays the list of controls of the AUT in a hierarchical tree structure. Clicking on a node in the tree displays its attributes in the Properties table (5).
+    
+    \item \textbf{Properties table:} This area displays the attributes of the node selected in the Elements treeview area (4) or highlighted using the Inspect controls feature (3). Users can check checkboxes to select attributes for defining the control to be tested and add them to the Definitions table (6) using the Add definition button (7).
+    
+    \item \textbf{Definitions table:} This table contains the definitions of controls to be tested. Users can select attributes in the Properties table (5) and add them to this table using the Add definition button (7). Users can also check checkboxes to select definitions for exporting to a .resource file using the Export button (10).
+    
+    \item \textbf{Add definition button:} Press this button to add the selected attributes from the Properties table (5) as definitions for a control in the Definitions table (6).
+    
+    \item \textbf{Remove Definition button:} Press this button to remove the selected definition from the Definitions table (6).
+    
+    \item \textbf{Clear Definitions button:} Press this button to remove all definitions from the Definitions table (6).
+    
+    \item \textbf{Export button:} Export all selected definitions from the Definitions table (6) into a .resource file.
+\end{enumerate}
+
+\subsubsection{Creating a Resource File}
+To create a resource file using the Automation Inspector tool, follow these steps:
+
+\begin{enumerate}
+    \item Launch the Automation Inspector tool from C:/Program Files/RobotFramework/python39/Lib/site-packages/QConnectWinapp/tools/bin/release.
+    \item Start the Application Under Test (AUT) by clicking the \textbf{Exec AUT} button. After clicking, a dialog will open, allowing the user to select the path to the executable file for the AUT. 
+	In the following example, I will input the path for the Calculator application.
+	
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.6\textwidth]{pictures/step2.png}
+        \caption{Select the AUT path to execute}
+        \label{fig:select_aut}
+    \end{figure}
+	
+    \item After selecting the AUT executable, click the \textbf{OK} button to start the AUT. The \textbf{Elements treeview} will be populated, showing a hierarchical tree of controls present in the AUT.
+    \item To view the properties of a control, you can either:
+        \begin{itemize}
+            \item Click on a node in the \textbf{Elements treeview} to display its properties in the \textbf{Properties table}.
+            \item Select the \textbf{Inspect controls} button and hover the mouse over a control in the AUT. The corresponding control in the \textbf{Elements treeview} will be selected and its properties will be shown in the \textbf{Properties table}.
+        \end{itemize}
+		
+	\begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.8\textwidth]{pictures/step3.png}
+        \caption{View control properties}
+        \label{fig:view_properties}
+    \end{figure}
+	
+    \item Select the desired attributes for control definitions by checking the checkboxes in the \textbf{Properties table}.
+	
+	\begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.8\textwidth]{pictures/step4.png}
+        \caption{Select property for definition}
+        \label{fig:select_prop}
+    \end{figure}
+	
+	\newpage
+    \item Click the \textbf{Add definition} button to add the selected attributes to the \textbf{Definitions table}. After clicking the button, a dialog will appear for the user to declare a name corresponding with the definition. In the following example, I will fill the name as 'btn2Num', and the definition will be "{"AutomationId":"num2Button"}", which means that the 'btn2Num' is a control with the AutomationId property value of 'num2Button'.
+	
+	\begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.8\textwidth]{pictures/step5.png}
+        \caption{Declare a test automation control}
+        \label{fig:declare_control}
+    \end{figure}
+	
+    \item Repeat the process to define multiple controls and their attributes.
+	\newpage
+    \item Use the \textbf{Export} button to export selected definitions to a .resource file.
+	
+	\begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.8\textwidth]{pictures/step6.png}
+        \caption{Export to resource file}
+        \label{fig:export}
+    \end{figure}
+	
+\end{enumerate}
+
+By following these steps, you can effectively utilize the Automation Inspector tool to interact with controls, define attributes, and create resource files for testing purposes.
+
+
 
 \hypertarget{example}{%
 \section{Example}\label{example}}
@@ -118,11 +204,11 @@ Resource    QConnectWinapp/GUIAction.resource
 *** Variables ***
 ${CONNECTION_NAME}  TEST_CONN
 
-&{Number 8}       acc_id=num8Button
-&{Number 9}       acc_id=num9Button
-&{Equal}          acc_id=equalButton
-&{Result}         acc_id=CalculatorResults
-&{Plus}           acc_id=plusButton
+&{Number 8}       AutomationId=num8Button
+&{Number 9}       AutomationId=num9Button
+&{Equal}          AutomationId=equalButton
+&{Result}         AutomationId=CalculatorResults
+&{Plus}           AutomationId=plusButton
 
 
 *** Test Cases ***
@@ -182,7 +268,7 @@ Close Connection
 
 \textbf{Explanation:}
 \begin{itemize}
-\item \colorbox{gray!16}{\textbf{\&\{Number 8\} acc\_id=num8Button}}: This line is used to identify the 'Number 8' button as the control on the application with an Accessible Name (acc\_id) of 'num8Button'.
+\item \colorbox{gray!16}{\textbf{\&\{Number 8\} AutomationId=num8Button}}: This line is used to identify the 'Number 8' button as the control on the application with an Accessible Name (AutomationId) of 'num8Button'.
 \item \colorbox{gray!16}{\textbf{"app": "Microsoft.WindowsCalculator\_8wekyb3d8bbwe!App"}}: This line specifies that the AUT is the application with the package name 'Microsoft.WindowsCalculator\_8wekyb3d8bbwe!App'. You can also use the full path to the exe file of the AUT.
 \item \colorbox{gray!16}{\textbf{send command conn\_name=\$\{CONNECTION\_NAME\}...command=\$\{Action.click\}}}: This line means to click on the Number 8 button on the AUT.
 \item \colorbox{gray!16}{\textbf{\$\{Action.click\}}} has been defined in the resource file \colorbox{gray!16}{\textbf{QConnectWinapp/GUIAction.resource}}.

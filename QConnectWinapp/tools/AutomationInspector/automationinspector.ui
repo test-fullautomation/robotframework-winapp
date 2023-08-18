@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AutomationInspector</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Automation Inspector</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QToolBar" name="mainToolBar">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <action name="actionOpen">
+       <property name="icon">
+        <iconset>
+         <normaloff>:/icons/execIcon.png</normaloff>:/icons/execIcon.png</iconset>
+       </property>
+       <property name="text">
+        <string>Open</string>
+       </property>
+      </action>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTreeView" name="treeView">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+      <widget class="QWidget" name="rightColumn">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QSplitter" name="tableSplitter">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QTableView" name="tableView">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>1</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+          <widget class="QWidget" name="bottomRow">
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QToolBar" name="definitionToolBar">
+              <!-- Add your actions and icons to the toolbar -->
+               <property name="orientation">
+	        <enum>Qt::Horizontal</enum>
+	       </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableView" name="secondTableView">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                <horstretch>1</horstretch>
+                <verstretch>1</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+

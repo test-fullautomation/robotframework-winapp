@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>icons/execute-icon.png</file>
+        <file>icons/automation-icon.png</file>
+        <file>icons/refresh-icon.png</file>
+        <file>icons/add-icon.png</file>
+        <file>icons/clean-icon.png</file>
+        <file>icons/export-icon.png</file>
+        <file>icons/remove-icon.png</file>
+        <file>icons/target-icon.png</file>
+    </qresource>
+</RCC>
