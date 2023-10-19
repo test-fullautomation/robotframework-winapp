@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
-VERSION = '1.0.0'
-VERSION_DATE = '25.04.2023'
+VERSION = '1.0.2'
+VERSION_DATE = '19.10.2023'
