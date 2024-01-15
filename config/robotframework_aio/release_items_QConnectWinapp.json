@@ -45,15 +45,9 @@
 # ------------------------------------------
 
    "RELEASES"  : {
-                   "0.9." : [
-                              "QConnectWinapp change 0.9 A",
-                              "QConnectWinapp change 0.9 B",
-                              "QConnectWinapp change 0.9 X"
-                            ],
-                   "0.10." : [
-                               "QConnectWinapp change 0.10 A",
-                               "QConnectWinapp change 0.10 B",
-                               "QConnectWinapp change 0.10 X"
+                   "0.x.y" : [
+                               "0.x.y",
+                               "0.x.y"
                              ]
                  }
 }
